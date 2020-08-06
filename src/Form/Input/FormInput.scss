@@ -1,0 +1,14 @@
+.form--group{
+    margin:10px 0;
+    &__input{
+        width:300px;
+    }
+}
+
+@media (max-width:320px){
+    .form--group{
+        &__input{
+            width:170px;
+        }
+    }
+}

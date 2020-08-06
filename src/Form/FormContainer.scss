@@ -1,0 +1,79 @@
+.Modal{
+    position: absolute;;
+    background-color:rgba(0, 0, 0, 0.753);
+    top:0;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+
+    &__Form{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        position:fixed;
+        background-color:whitesmoke;
+        width:40%;
+        height:50%;
+        min-height:330px;
+        max-height:400px;
+        border-radius:20px 20px;
+
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+
+        &__CloseBtn{
+            font-size:40px;
+            right:0;
+            position: absolute;
+            margin:10px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        &__Title{
+            text-align:center;
+        }
+    }
+}
+
+.Modal--Open{
+    display:flex;
+}
+
+.Modal--Closed{
+    display:none;
+}
+
+@media (max-width:319px){
+    .Modal__Form{
+        width:100%;
+        height:60%;
+        padding:0 10px;
+    }
+}
+
+
+@media (min-width:320px) and (max-width:480px){
+    .Modal__Form{
+        width:95%;
+        height:50%;
+        padding:0 10px;
+    }
+}
+
+@media (min-width:481px) and (max-width:768px){
+    .Modal__Form{
+        width:340px;
+        padding:0 10px;
+    }
+}
+
+@media (min-width:481px){
+    .Modal__Form{
+        width:400px;
+        padding:0 10px;
+    }
+}

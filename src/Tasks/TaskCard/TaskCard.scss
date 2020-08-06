@@ -1,0 +1,115 @@
+.task{
+    width:70%;
+    height:100px;
+    background-color:whitesmoke;
+    border-radius:10px 10px;
+    display:flex;
+    margin:5px;
+    box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+    &__status{
+        width:20%;
+        border-radius:10px 0 0 10px;
+        background-color:rgba(173, 216, 230, 0.671);
+        display:flex;
+        justify-content: center;
+
+        .circle{
+            width:35px;
+            &:hover{
+                cursor:pointer;
+            }
+        }
+        .tick{
+            fill: green;
+        }
+    }
+
+    &__details{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        padding:0 0 0 10px;
+        width:70%;
+
+        &__title{
+            font-size:20px;
+            margin:0;
+        }
+        &__time{
+            font-size:16px;
+            margin:5px 0;
+        }
+    }
+
+    &__remove{
+        display:flex;  
+        justify-content: center;
+        align-items: center;
+        color:gray;
+        font-size:45px;
+        padding:0 10px;
+
+        &:hover{
+            color:black;
+            transition:.5s;
+            cursor: pointer;
+        }
+    }
+}
+
+.task--completed{
+    background-color:rgb(192, 191, 191);
+}
+
+.task__details__title--completed, .task__details__time--completed{
+    color:gray;
+    font-style: italic;
+    text-decoration: red line-through;
+    margin:0;
+}
+
+
+@media (min-width:320px) and (max-width:479px){
+    .task{
+        width:75%;
+        height:80px;
+
+        &__status{
+            .circle{
+                width:25px;
+            }
+        }
+        &__details{
+            &__title{
+                font-size: 16px;
+            }
+        }
+        &__remove{
+            font-size:40px;
+        }
+    }
+}
+@media (min-width:480px) and (max-width:767px){
+    .task{
+        width:75%;
+        height:90px;
+
+        &__status{
+            .circle{
+                width:30px;
+            }
+        }
+
+        &__details{
+            &__title{
+                font-size: 18px;
+            }
+        }
+    }
+}
